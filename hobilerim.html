@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Elif Kahraman | Hobilerim</title>
+  <link rel="stylesheet" href="css/style.css" />
+  
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+ integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Ana sayfa">
+        <span class="dot"></span>
+        <span>Elif Kahraman</span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Hakkımda</a></li>
+          <li><a href="hobilerim.html">Hobilerim</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    
+<section class="section" style="padding-top:38px">
+  <h2>Hobilerim</h2>
+  <p>
+    Yeni yerler keşfetmeyi ve şehir yürüyüşlerini seviyorum. Aşağıdaki haritada yurtdışında gezdiğim bazı yerleri işaretledim.
+    İşaretlere tıklayarak kısa notları görebilirsin.
+  </p>
+
+  <div class="split">
+    <div class="card">
+      <h3>Sevdiğim Aktiviteler</h3>
+      <ul>
+        <li>Yeni şehirler keşfetmek</li>
+        <li>Harita uygulamaları ile rota planlamak</li>
+        <li>Fotoğraf çekmek</li>
+        <li>Doğa yürüyüşleri</li>
+      </ul>
+      <p class="helper">Harita: Leaflet + OpenStreetMap/Esri altlıkları.</p>
+    </div>
+
+    <div class="card">
+      <h3>Gezdiğim Yerler</h3>
+      <ul>
+        <li>Gürcistan – Batum</li>
+        <li>ABD – Utah</li>
+        <li>ABD – Las Vegas</li>
+        <li>ABD – Los Angeles</li>
+      </ul>
+      <p class="helper">Harita otomatik olarak tüm noktaları kapsayacak şekilde yakınlaştırır.</p>
+    </div>
+  </div>
+
+  <div class="map-wrap" style="margin-top:16px">
+    <div id="map" aria-label="Gezdiğim yerler haritası"></div>
+    <div class="map-caption">Noktalar örnek koordinatlar ile gösterilmiştir (şehir/eyalet merkezleri).</div>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <small>© <span id="y"></span> Elif Kahraman • Web CBS – Ödev 1</small>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+  
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+ integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="js/map.js"></script>
+
+</body>
+</html>

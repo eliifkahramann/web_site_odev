@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Elif Kahraman | İletişim</title>
+  <link rel="stylesheet" href="css/style.css" />
+  
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Ana sayfa">
+        <span class="dot"></span>
+        <span>Elif Kahraman</span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Hakkımda</a></li>
+          <li><a href="hobilerim.html">Hobilerim</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    
+<section class="section" style="padding-top:38px">
+  <h2>İletişim</h2>
+  <p>
+    İstersen aşağıdaki form ile bana e‑posta taslağı oluşturabilirsin. (Form gönder butonu cihazındaki e‑posta uygulamasını açar.)
+  </p>
+
+  <div class="grid">
+    <div class="card" style="grid-column: span 6;">
+      <h3>İletişim Bilgileri</h3>
+      <ul>
+        <li><b>E‑posta:</b> <a href="mailto:eliffkahramann@gmail.com">eliffkahramann@gmail.com</a></li>
+        <li><b>Telefon:</b> <a href="tel:+905512327058">+90 551 232 70 58</a></li>
+      </ul>
+      <p class="helper">Not: Bu bilgiler ödev kapsamında örnek olarak kullanılmıştır.</p>
+    </div>
+
+    <div class="card" style="grid-column: span 6;">
+      <h3>Hızlı Mesaj</h3>
+      <form class="form" id="mailForm">
+        <input class="input" id="name" placeholder="Ad Soyad" required />
+        <input class="input" id="subject" placeholder="Konu" required />
+        <textarea id="message" placeholder="Mesajın..." required></textarea>
+        <button class="btn primary" type="submit">E‑posta Oluştur</button>
+      </form>
+      <div class="helper">Gönderim: mailto ile yapılır (sunucu tarafı yok).</div>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <small>© <span id="y"></span> Elif Kahraman • Web CBS – Ödev 1</small>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+  
+<script>
+document.getElementById("mailForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  const name = document.getElementById("name").value.trim();
+  const subject = document.getElementById("subject").value.trim();
+  const message = document.getElementById("message").value.trim();
+
+  const to = "eliffkahramann@gmail.com";
+  const body = encodeURIComponent("Merhaba, ben " + name + ".\n\n" + message + "\n\nİyi günler.");
+  const url = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${body}`;
+  window.location.href = url;
+});
+</script>
+
+</body>
+</html>
